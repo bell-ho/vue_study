@@ -1,6 +1,9 @@
 import {createRouter, createWebHistory} from 'vue-router'
 import Home from '../views/Home.vue'
 import Contact from '../views/Contact.vue'
+import DataBindingHtml from '../views/DataBindingHtml.vue'
+import Example from '../views/Example.vue'
+import Rendering from '../views/Rendering.vue'
 
 const routes = [
   {
@@ -31,7 +34,10 @@ const routes = [
     name: 'Basic',
     component: () => import(/* webpackChunkName: "Basic" */ '../views/DataBinding.vue')
   },
-]
+  {path: '/databindinghtml', name: 'DataBindingHtml', component: DataBindingHtml},
+  {path: '/example', name: 'Example', component: Example},
+  {path: '/rendering', name: 'Rendering', component: Rendering}
+];
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
