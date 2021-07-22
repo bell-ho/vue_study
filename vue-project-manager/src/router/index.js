@@ -4,6 +4,8 @@ import Contact from '../views/Contact.vue'
 import DataBindingHtml from '../views/DataBindingHtml.vue'
 import Example from '../views/Example.vue'
 import Rendering from '../views/Rendering.vue'
+import Event from '../views/Event.vue'
+import Example3 from '../views/Example3.vue'
 
 const routes = [
   {
@@ -36,7 +38,10 @@ const routes = [
   },
   {path: '/databindinghtml', name: 'DataBindingHtml', component: DataBindingHtml},
   {path: '/example', name: 'Example', component: Example},
-  {path: '/rendering', name: 'Rendering', component: Rendering}
+  {path: '/rendering', name: 'Rendering', component: Rendering},
+  {path: '/event', name: 'Event', component: Event},
+  {path: '/example3', name: 'Example3', component: Example3},
+
 ];
 
 const router = createRouter({

@@ -6,6 +6,8 @@
     <router-link to="/databindinghtml">DataBindingHtml</router-link> |
     <router-link to="/example">Example</router-link> |
     <router-link to="/rendering">Rendering</router-link> |
+    <router-link to="/event">Example2</router-link> |
+    <router-link to="/example3">Search.vue</router-link> |
 
   </div>
   <router-view/>
