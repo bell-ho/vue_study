@@ -7,7 +7,8 @@
     <router-link to="/example">Example</router-link> |
     <router-link to="/rendering">Rendering</router-link> |
     <router-link to="/event">Example2</router-link> |
-    <router-link to="/example3">Search.vue</router-link> |
+    <router-link to="/example3">Search</router-link> |
+    <router-link to="/serverdata">ServerData</router-link> |
 
   </div>
   <router-view/>

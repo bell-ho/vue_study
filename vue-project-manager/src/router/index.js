@@ -6,6 +6,7 @@ import Example from '../views/Example.vue'
 import Rendering from '../views/Rendering.vue'
 import Event from '../views/Event.vue'
 import Example3 from '../views/Example3.vue'
+import ServerData from '../views/ServerData.vue'
 
 const routes = [
   {
@@ -41,6 +42,7 @@ const routes = [
   {path: '/rendering', name: 'Rendering', component: Rendering},
   {path: '/event', name: 'Event', component: Event},
   {path: '/example3', name: 'Example3', component: Example3},
+  {path: '/serverdata', name: 'ServerData', component: ServerData},
 
 ];
 
