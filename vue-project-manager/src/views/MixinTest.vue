@@ -25,7 +25,7 @@
     <PageTitle v-bind:title="title"/>
 
     <!--send-message 이 이름으로 받음-->
-    <ChildComponent  @send-message="sendMessage" ref="child" :author="author" :likes="likes" :isOk="isOk"
+    <ChildComponent @send-message="sendMessage" ref="child" :author="author" :likes="likes" :isOk="isOk"
                     :commentIds="commentIds"/>
   </div>
 
@@ -35,18 +35,19 @@
     </h1>
   </div>
   <div>
-        <button type="button" @click="callChildFunction">부모의 클릭</button>
+    <button type="button" @click="callChildFunction">부모의 클릭</button>
   </div>
 
   <button type="button" @click="showData">부모 버튼</button>
 </template>
 <script>
-import axios from 'axios';
+import ApiMixin from '../api.js';
 import PageTitle from '../components/PageTitle';
 import ChildComponent from "./ChildComponent";
 
 export default {
   name: '',
+  mixins: [ApiMixin],
   components: {
     PageTitle,
     ChildComponent
@@ -63,7 +64,7 @@ export default {
     };
   },
   computed: {
-    message2(){
+    message2() {
       return this.$refs.child.message2;
     }
   },
@@ -72,29 +73,18 @@ export default {
   created() {
   },
   mounted() {
+    console.log('컴포넌트 마운티드');
   },
   unmounted() {
   },
   methods: {
     async getProductList() {
       this.productList =
-        await this.api(
+        await this.$callApi(
           'https://8daa045a-f995-4be6-9aa3-f5c2ecb1bf5b.mock.pstmn.io/list',
           'get',
           {}
         );
-    },
-
-    async api(url, method, data) {//async : 비동기
-      return (
-        await axios({ //await : 결과가 오기까지 대기
-          method: method,
-          url: url,
-          data: data
-        }).catch(e => {
-          console.log(e);
-        })
-      ).data; //서버에서 response해준 data
     },
     callChildFunction() {
       //this.$refs.child 여기까지 child 컴포넌트로 들어오고 거기에서 ref가 child_btn인 버튼을 클릭

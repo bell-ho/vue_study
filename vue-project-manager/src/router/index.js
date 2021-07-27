@@ -7,6 +7,7 @@ import Rendering from '../views/Rendering.vue'
 import Event from '../views/Event.vue'
 import Example3 from '../views/Example3.vue'
 import ServerData from '../views/ServerData.vue'
+import MixinTest from '../views/MixinTest.vue'
 
 const routes = [
   {
@@ -43,6 +44,7 @@ const routes = [
   {path: '/event', name: 'Event', component: Event},
   {path: '/example3', name: 'Example3', component: Example3},
   {path: '/serverdata', name: 'ServerData', component: ServerData},
+  {path: '/mixin', name: 'MixinTest', component: MixinTest},
 
 ];
 

@@ -9,6 +9,7 @@
     <router-link to="/event">Example2</router-link> |
     <router-link to="/example3">Search</router-link> |
     <router-link to="/serverdata">ServerData</router-link> |
+    <router-link to="/mixin">Mixin</router-link> |
 
   </div>
   <router-view/>
