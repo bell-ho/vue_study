@@ -45,7 +45,6 @@ module.exports = {
       '\tAND ti.`type` = 2'
   },
   productInsert: {
-
     query:
       'INSERT INTO t_product (product_name , product_price , delivery_price , add_delivery_price , tags , outbound_days , seller_id , category_id) ' +
       'values(?,?,?,?,?,?,?,?)'
