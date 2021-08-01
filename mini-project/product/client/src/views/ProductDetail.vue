@@ -104,7 +104,8 @@ export default {
         };
     },
     created() {
-        this.productId = this.$route.query.product_id; //this.$router.push({path: '/detail', query: {product_id: product_id}}); <== 이거로 받은 Id
+        //this.$router.push({path: '/detail', query: {product_id: product_id}}); <== 이거로 받은 Id
+        this.productId = this.$route.query.product_id;
         this.getProductDetail();
         this.getProductImage();
     },

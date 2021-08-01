@@ -20,7 +20,7 @@
 <!--                            <router-link class="nav-link" to="/detail">제품상세페이지</router-link>-->
 <!--                        </li>-->
                         <li class="nav-item" v-if="user.email!==undefined">
-                            <router-link class="nav-link" to="/create">제품등록페이지</router-link>
+                            <router-link class="nav-link" to="/sales">제품등록페이지</router-link>
                         </li>
                         <li v-if="user.email==undefined">
                             <button class="btn btn-danger" type="button" @click="kakaoLogin">로그인</button>
