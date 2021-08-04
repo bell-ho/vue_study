@@ -69,8 +69,12 @@ module.exports = {
     },
     productInsert: {
         query:
-            'INSERT INTO t_product (product_name , product_price , delivery_price , add_delivery_price , tags , outbound_days , seller_id , category_id) ' +
-            'values(?,?,?,?,?,?,?,?)'
+        /*'INSERT INTO t_product (product_name , product_price , delivery_price , add_delivery_price , tags , outbound_days , seller_id , category_id) ' +
+        'values(?,?,?,?,?,?,?,?)'*/
+
+        // 객체 하나를 통으로 받음
+            `INSERT INTO t_product
+             set ?`
     },
     productImageInsert: {
         query:
@@ -90,5 +94,11 @@ module.exports = {
         query:
             'delete ' +
             'from t_product where id = ?'
+    },
+    categoryList:{
+        query:
+        `select *
+         from t_category;
+         `
     }
 }
